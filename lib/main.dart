@@ -28,7 +28,7 @@ class Home extends StatefulWidget {
 }
 
 class _HomeState extends State<Home> {
-  int id = 5;
+  String id = "1";
 
   @override
   void setState(id) {
@@ -65,7 +65,7 @@ class _HomeState extends State<Home> {
                         height: 50,
                       ),
                       Image.asset(
-                        "assets/item-" + id.toString() + ".png",
+                        "assets/item-$id.png",
                         width: 140,
                         height: 140,
                       ),
@@ -92,20 +92,41 @@ class _HomeState extends State<Home> {
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
-                          Image.asset(
-                            "assets/item-1.png",
-                            height: 80,
-                            width: 80,
+                          GestureDetector(
+                            child: Image.asset(
+                              "assets/item-1.png",
+                              height: 80,
+                              width: 80,
+                            ),
+                            onTap: () {
+                              setState(() {
+                                id = "1";
+                              });
+                            },
                           ),
-                          Image.asset(
-                            "assets/item-2.png",
-                            height: 80,
-                            width: 80,
+                          GestureDetector(
+                            child: Image.asset(
+                              "assets/item-2.png",
+                              height: 80,
+                              width: 80,
+                            ),
+                            onTap: () {
+                              setState(() {
+                                id = "2";
+                              });
+                            },
                           ),
-                          Image.asset(
-                            "assets/item-3.png",
-                            height: 80,
-                            width: 80,
+                          GestureDetector(
+                            child: Image.asset(
+                              "assets/item-3.png",
+                              height: 80,
+                              width: 80,
+                            ),
+                            onTap: () {
+                              setState(() {
+                                id = "3";
+                              });
+                            },
                           ),
                         ],
                       ),
@@ -113,20 +134,41 @@ class _HomeState extends State<Home> {
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
-                          Image.asset(
-                            "assets/item-4.png",
-                            height: 80,
-                            width: 80,
+                          GestureDetector(
+                            child: Image.asset(
+                              "assets/item-4.png",
+                              height: 80,
+                              width: 80,
+                            ),
+                            onTap: () {
+                              setState(() {
+                                id = "4";
+                              });
+                            },
                           ),
-                          Image.asset(
-                            "assets/item-5.png",
-                            height: 80,
-                            width: 80,
+                          GestureDetector(
+                            child: Image.asset(
+                              "assets/item-5.png",
+                              height: 80,
+                              width: 80,
+                            ),
+                            onTap: () {
+                              setState(() {
+                                id = "5";
+                              });
+                            },
                           ),
-                          Image.asset(
-                            "assets/item-6.png",
-                            height: 80,
-                            width: 80,
+                          GestureDetector(
+                            child: Image.asset(
+                              "assets/item-6.png",
+                              height: 80,
+                              width: 80,
+                            ),
+                            onTap: () {
+                              setState(() {
+                                id = "5";
+                              });
+                            },
                           ),
                         ],
                       ),
