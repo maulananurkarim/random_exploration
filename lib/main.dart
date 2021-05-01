@@ -14,7 +14,7 @@ class MyApp extends StatelessWidget {
       home: Home(),
       theme: ThemeData(
         primarySwatch: Colors.teal,
-        canvasColor: Colors.transparent,
+        // canvasColor: Colors.transparent,
       ),
     );
   }
@@ -51,7 +51,7 @@ class Home extends StatelessWidget {
                   height: 50,
                 ),
                 Image.asset(
-                  "assets/primary.png",
+                  "assets/item-3.png",
                   width: 140,
                   height: 140,
                 ),
@@ -59,7 +59,7 @@ class Home extends StatelessWidget {
                   height: 16,
                 ),
                 Text(
-                  "Anne Margaritha",
+                  "Maulana Nurkarim",
                   style: GoogleFonts.poppins(
                     textStyle: mediumtitleTextStyle,
                   ),
@@ -68,7 +68,7 @@ class Home extends StatelessWidget {
                   height: 4,
                 ),
                 Text(
-                  "UX Designer",
+                  "Product Designer",
                   style: GoogleFonts.poppins(textStyle: subtitleTextStyle),
                 ),
                 SizedBox(
@@ -109,7 +109,7 @@ class Home extends StatelessWidget {
                       width: 80,
                     ),
                     Image.asset(
-                      "assets/item.png",
+                      "assets/item-6.png",
                       height: 80,
                       width: 80,
                     ),
@@ -193,7 +193,9 @@ void actionButton(BuildContext context) {
                 height: 55,
                 width: 224,
                 child: ElevatedButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.pop(context);
+                  },
                   style: ElevatedButton.styleFrom(
                     primary: yellowColor,
                     shape: RoundedRectangleBorder(
