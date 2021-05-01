@@ -14,7 +14,7 @@ class MyApp extends StatelessWidget {
       home: Home(),
       theme: ThemeData(
         primarySwatch: Colors.teal,
-        // canvasColor: Colors.transparent,
+        canvasColor: Colors.transparent,
       ),
     );
   }
@@ -166,7 +166,7 @@ class _HomeState extends State<Home> {
                             ),
                             onTap: () {
                               setState(() {
-                                id = "5";
+                                id = "6";
                               });
                             },
                           ),
