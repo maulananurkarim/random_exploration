@@ -12,6 +12,10 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: Home(),
+      theme: ThemeData(
+        primarySwatch: Colors.teal,
+        canvasColor: Colors.transparent,
+      ),
     );
   }
 }
@@ -118,7 +122,9 @@ class Home extends StatelessWidget {
                   width: 224,
                   height: 55,
                   child: ElevatedButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      actionButton(context);
+                    },
                     style: ElevatedButton.styleFrom(
                       primary: Colors.white,
                       shape: RoundedRectangleBorder(
@@ -140,4 +146,71 @@ class Home extends StatelessWidget {
       ),
     );
   }
+}
+
+void actionButton(BuildContext context) {
+  showModalBottomSheet<void>(
+    context: context,
+    builder: (BuildContext context) {
+      return Container(
+        color: Colors.transparent,
+        height: 290,
+        child: Container(
+          decoration: BoxDecoration(
+            color: Colors.white,
+            borderRadius: BorderRadius.vertical(
+              top: Radius.circular(40),
+            ),
+          ),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: <Widget>[
+              SizedBox(
+                height: 50,
+              ),
+              Text(
+                'Update Photo',
+                style: GoogleFonts.poppins(textStyle: mediumtitleTextStyle)
+                    .copyWith(fontSize: 22),
+              ),
+              SizedBox(
+                height: 12,
+              ),
+              Text(
+                "You are only able to change",
+                style: GoogleFonts.poppins(textStyle: subtitleTextStyle)
+                    .copyWith(fontSize: 18),
+              ),
+              Text(
+                "the picture profile once",
+                style: GoogleFonts.poppins(textStyle: subtitleTextStyle)
+                    .copyWith(fontSize: 18),
+              ),
+              SizedBox(
+                height: 30,
+              ),
+              SizedBox(
+                height: 55,
+                width: 224,
+                child: ElevatedButton(
+                  onPressed: () {},
+                  style: ElevatedButton.styleFrom(
+                    primary: yellowColor,
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(16),
+                    ),
+                  ),
+                  child: Text(
+                    "Continue",
+                    style: GoogleFonts.poppins(textStyle: mediumtitleTextStyle)
+                        .copyWith(fontSize: 16, color: Colors.white),
+                  ),
+                ),
+              ),
+            ],
+          ),
+        ),
+      );
+    },
+  );
 }
